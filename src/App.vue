@@ -2,59 +2,79 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
       dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+      shrink-on-scroll
+      prominent
+      color="deep-purple darken-4">
+      <v-app-bar-title class="text-no-wrap">Maria Papadopoulou</v-app-bar-title>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+
+      <div class="avatar-container">
+        <v-avatar class="avatar-border" color="deep-purple accent-2" size="130">
+          <img src="https://github.com/Maria-Papa.png" alt="Maria-Papa" />
+        </v-avatar>
       </div>
 
       <v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+      <v-btn icon>
+        <v-icon>mdi-heart</v-icon>
       </v-btn>
     </v-app-bar>
 
     <v-main>
-      <HelloWorld/>
+      <v-container fluid>
+        <!-- If using vue-router -->
+        <router-view></router-view>
+      </v-container>
     </v-main>
+
+    <v-footer app>
+      <!-- -->
+    </v-footer>
   </v-app>
 </template>
 
+<style scoped>
+  .avatar-border {
+    border: solid;
+    width: 100%;
+    margin-left: -50%;
+
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 80%);
+    -webkit-box-shadow: 0 0 0.3125rem rgb(0 0 0 / 80%);
+  }
+
+  .avatar-border img {
+    width: 100%;
+  }
+
+  .v-app-bar .avatar-container {
+    position: absolute;
+    bottom: -3.5rem;
+    left: 50%;
+
+    transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+  }
+
+  .v-app-bar--is-scrolled .avatar-container {
+    opacity: 0;
+    visibility: hidden;
+
+    transition: visibility linear 0.3s, opacity 0.3s ease-in-out;
+    -webkit-transition: visibility linear 0.3s, opacity 0.3s ease-in-out;
+    -moz-transition: visibility linear 0.3s, opacity 0.3s ease-in-out;
+  }
+</style>
+
 <script>
-import HelloWorld from './components/HelloWorld';
-
-export default {
-  name: 'App',
-
-  components: {
-    HelloWorld,
-  },
-
-  data: () => ({
-    //
-  }),
-};
+  export default {
+    data() {
+      return {
+       
+      }
+    },
+  }
 </script>
