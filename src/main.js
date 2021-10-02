@@ -6,6 +6,8 @@ Vue.config.productionTip = false
 
 Vue.use(VueRouter);
 
+import '@/assets/style.css'
+
 import App from './App.vue'
 import HelloWorld from './views/HelloWorld.vue'
 

@@ -5,14 +5,16 @@
       dark
       shrink-on-scroll
       prominent
-      color="deep-purple darken-4">
+      color="#1F0560">
       <v-app-bar-title class="text-no-wrap">Maria Papadopoulou</v-app-bar-title>
 
 
       <div class="avatar-container">
-        <v-avatar class="avatar-border" color="deep-purple accent-2" size="130">
-          <img src="https://github.com/Maria-Papa.png" alt="Maria-Papa" />
-        </v-avatar>
+        <a href="https://github.com/Maria-Papa">
+          <v-avatar class="avatar-border" color="#ffffff" size="130">
+            <img src="https://github.com/Maria-Papa.png" alt="Maria-Papa" />
+          </v-avatar>
+        </a>
       </div>
 
       <v-spacer></v-spacer>
